@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Aptitude Quiz</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .question {
+            background: #0bdc1c;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            margin-top: 1%;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            width: 50%; /* Make options full width */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        .option:hover {
+            background-color: #FF5493;
+        }
+        .correct {
+            background-color: #54FFC0;
+            border-color: #c3e6cb;
+            width: 50%;
+        }
+        .wrong {
+            background-color: #FF3333;
+            border-color: #f5c6cb;
+            width: 50%;
+        }
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 50%;
+            background-color: #dfd112;
+            border-left: 6px solid #2196F3;
+        }
+        .discussion {
+            margin-top: 20px;
+            background: #10bcd3;
+            width: 97%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .filter {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .filter select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%; /* Full width for the select */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        .comment {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 6px solid #ffd700;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .question, .discussion {
+                padding: 15px;
+            }
+            .option {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!--1st Question-->
+   
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>1. A person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?</p>
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A. 3.6  </div>
+            <div class="option" data-answer="correct"> B. 7.2 </div>        
+            <div class="option" data-answer="wrong"> C.  8.4</div>
+            <div class="option" data-answer="wrong">D. 10</div>
+        </div>
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation: Option B</strong><br>
+                Speed = {600/ 5 x 60} m/sec.
+                      = 2 m/sec. 
+                Converting m/sec to km/hr. 
+                 = {2 x 18/5} km/hr. 
+                 =7.2 km/hr.
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5">Anu
+            said:
+            @Vijaya Lakshmi.
+            it is how we get 18/5.
+            1 km = 1000m.
+            1 km/h = 1000m/h.
+            = 1000/60 m/min.
+            = 1000/(60*60) m/s.
+            = 1000/3600m/s.
+            = 5/18 m/s.
+            Similarly,
+            1 m/s = 18/5 km/h.
+            </div>
+
+        <div class="comment" data-date="2023-02-15" data-detail="3">Asifkhan
+            said:
+            Ans = Distance ÷ time*second.
+            = 600 ÷ 5 * 60.
+            = 7200.
+            Answer is 7.2.
+            
+            {Convert into kilometre multiplied by 1000;
+            7200/1000.
+            7.2 kilometres in 1 hour}
+            </div>
+            
+        <div class="comment" data-date="2023-05-10" data-detail="4">Rinose
+            said:
+            It was a format when converted to m/s to km /hr use 18/5 and Km/hr to m/s use 5/18.
+            </div>
+      
+        <div class="comment" data-date="2023-08-20" data-detail="2">Harikaran
+        said: Option B is the correct answer.   </div>
+    
+      </div>
+       <br>
+
+       <!--2nd Question-->
+    
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>2.  A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?
+        </p>
+
+      
+        <div class="options">
+            <div class="option" data-answer="wrong"> A. 120 meters </div>
+            <div class="option" data-answer="wrong"> B. 180 meters </div>
+            <div class="option" data-answer="wrong"> C. 324 meters </div>
+            <div class="option" data-answer="correct">D.  150 meters</div>
+        </div>
+        <div class="explanation" id="explanation">
+            <strong>Explanation:</strong><br>
+            
+Speed =		60 x	5	m/sec	=		50	m/sec.
+18	3
+Length of the train = (Speed x Time).
+
+ Length of the train =		50	x 9	m = 150 m.
+3
+
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+                
+                <option value="most-detailed">Most Detailed</option>
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-02-01" data-detail="5">James Gini
+            said:
+            How we get 50, 3 and 18 in the solution?
+            </div>
+
+        <div class="comment" data-date="2023-05-15" data-detail="3">Vaishnavi
+            said:
+            60 * 9 = 540,
+            540 * 5/18 = 150.
+            </div>
+
+            <div class="comment" data-date="2023-09-10" data-detail="4">Akshata
+                said:
+                60 * 5/18 = 50/3,
+                Length = speed * time.
+                l = 50/3 * 9sec= 150 meters.</div>
+
+            <div class="comment" data-date="2023-08-20" data-detail="2"> Nithi
+                said:
+                According to me, the right answer should be 150.
+                </div>
+
+       </div>
+       <br>
+
+       <!--3rd Question-->
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>3.  In the first 10 overs of a cricket game, the run rate was only 3.2. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?
+        </p>
+
+        <div class="options">
+
+            <div class="option" data-answer="correct"> A. 6.25</div>
+            <div class="option" data-answer="wrong"> B.  6.5 </div>
+            <div class="option" data-answer="wrong"> C.  6.75 </div>
+            <div class="option" data-answer="wrong">D.  7</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            Required run rate =		282 - (3.2 x 10)		=	250	   = 6.25
+            40	40
+            Video Explanation: https://youtu.be/GhK9d8tcqvA
+        </div>
+
+     </div>
+
+
+     <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+
+        </div>
+
+        <div class="comment" data-date="2022-08-01" data-detail="5">Srijan
+            said:
+            I understand the solution with the help of the given explanation. Thanks, everyone.</div>
+            
+        <div class="comment" data-date="2023-04-15" data-detail="3">Karthi
+            said:
+            First 10 - run rate 3.2
+            3.2 = sum of runs/10
+            Sum = 3.2×10 = 32
+            40 over total runs 282.
+            So, 282 - 32 = 250 remaining runs.
+            Run rate = 250/40 = 6.25.
+            </div>
+
+        <div class="comment" data-date="2023-09-10" data-detail="4">  Cherry aishu
+            said:
+            Avg of 6 months = (6435+6927+6855+7230+6562+x)/6 = 6500.
+            (34009+x)/6 = 6500,
+            34009+x = 39000,
+            x = 39000-34009,
+            x = 4991.
+            </div>
+
+        <div class="comment" data-date="2023-01-20" data-detail="2">Kondru Durga Srinu
+            said:
+            So we calculate the runs in the first 10 overs = 10 * 3.2
+            First 10 overs they got 32 runs
+            Total runs for 50 overs is 282
+            Then, the remaining 40 overs they got = 282 - 32 = 250.
+            250/40 = 6.25
+            </div>
+
+    </div>
+    <br>
+
+    <!--4th Question-->
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p>4. A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day?
+        </p>
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  12 days</div>
+            <div class="option" data-answer="correct"> B.  15 days</div>
+            <div class="option" data-answer="wrong"> C.  16 days</div>
+            <div class="option" data-answer="wrong">D.  18 days</div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            A's 2 day's work =		1	x 2		=	1	.
+20	10
+(A + B + C)'s 1 day's work =		1	+	1	+	1		=	6	=	1	.
+20	30	60	60	10
+Work done in 3 days =		1	+	1		=	1	.
+10	10	5
+Now,	1	work is done in 3 days.
+5
+ Whole work will be done in (3 x 5) = 15 days.
+
+
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Naren kumar B
+            said:
+            A = 20,
+            B = 30,
+            C = 60.
+            Find 1/A + ((1/B + 1/C)/3).
+            = 15 => Answer.
+            </div>
+
+        <div class="comment" data-date="2023-02-15" data-detail="3"> Aya adel
+            said:
+            a=1/20
+            b=1/30
+            c=1/60.
+            
+            So a + b + c = 1/10.
+            
+            Work done in 3 days =1/20 + 1/20 + 1/10 = 1/5.
+            
+            The second 3 days will be 2/5,
+            Third 3 days 3/5,
+            Fourth 3 days 4/5,
+            Fifth 3 days 5/5,
+            
+            So, A needs 3*5 = 15 days.</div>
+ 
+        <div class="comment" data-date="2023-05-10" data-detail="4">Harshal sonwane
+            said:
+            1/5 work is done in 3 days.
+            
+            The total work 1 done in x days.
+            Simply cross multiply;
+            x*1/5 = 3 * 1.
+            x/5 = 3,
+            x = 15.
+            </div>
+  
+        <div class="comment" data-date="2023-08-20" data-detail="2">Azhar Khan
+            said:
+            Easy way to answer is:
+            
+            LCM of 20 30 60 = 60.
+            A = 20 * 3 = 60,
+            B = 30 * 2 = 60,
+            C = 60 * 1 = 60,.
+            
+            A + B + C = 3 + 2 + 1 = 6 ( together)
+            A's 2 days work = 2 * 3 = 6.
+            
+            Total work done by them = 6 + 6 = 12 unit
+            Total work is 60 unit.
+            So, 60 Ã· 15 = 5 units ( In one day by them )
+            Then in 3 days,
+            3*5 = 15 days</div>
+
+    </div>
+
+    <br>
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const filterSelect = document.getElementById('filter');
+        const comments = document.querySelectorAll('.comment');
+
+        questions.forEach(question => {
+            const options = question.querySelectorAll('.option');
+            const explanation = question.querySelector('.explanation');
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'wrong');
+                    });
+                    explanation.style.display = 'none';
+
+                    if (this.dataset.answer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        explanation.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        filterSelect.addEventListener('change', function() {
+            const selectedFilter = this.value;
+            const commentsArray = Array.from(comments);
+
+            if (selectedFilter === 'newest') {
+                commentsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (selectedFilter === 'oldest') {
+                commentsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (selectedFilter === 'most-detailed') {
+                commentsArray.sort((a, b) => b.dataset.detail - a.dataset.detail);
+            }
+
+            const discussionDivs = document.querySelectorAll('.discussion');
+            discussionDivs.forEach(discussionDiv => {
+                discussionDiv.innerHTML = `<h3>Discussion</h3><div class="filter"><label for="filter">Filter Comments:</label><select id="filter"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="most-detailed">Most Detailed</option></select></div>`;
+                const questionComments = commentsArray.filter(comment => comment.closest('.discussion') === discussionDiv);
+                questionComments.forEach(comment => discussionDiv.appendChild(comment.cloneNode(true)));
+            });
+        });
+    </script>
+</body>
+</html> 
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Interpretation-Quiz </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .question {
+            background: #15d2d2;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            font-size: 20px;
+            
+        }
+
+        .options {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            width: 40%; /* Make options full width */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+
+        .option:hover {
+            background-color: #00FFFF;
+        }
+
+        .correct {
+            background-color: #FFFF00;
+            border-color: #c3e6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+
+        .wrong {
+            background-color: #0fc0fc;
+            border-color: #f5c6cb;
+            width: 40%;
+            font-size: 20px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            width: 40%;
+            background-color: #eee;
+            border-left: 6px solid #f36721;
+            font-size: 20px;
+            background-color: #ffff66;
+        }
+
+        .discussion {
+            margin-top: 20px;
+            /* margin: 10px; */
+            background: #966fd6;
+            width: 98%;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        .filter {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 80%;
+            font-size: 20px;
+        }
+
+        .filter select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 40%; /* Full width for the select */
+            box-sizing: border-box; /* Include padding and border in width */
+            font-size: 20px;
+        }
+        .comment {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 6px solid #ffd700;
+            width: 40%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .question, .discussion {
+                padding: 15px;
+            }
+            .option {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+       <img src="_files/images/data-interpretation/blob.jpeg" alt="Item of Expenditure Table" class="img-fluid">
+        <p>1. What is the average amount of interest per year which the company had to pay during this period?</p>
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  Rs. 32.43 lakhs </div>
+            <div class="option" data-answer="correct"> B.  Rs. 33.72 lakhs</div>
+            <div class="option" data-answer="wrong"> C.  Rs. 34.18 lakhs</div>
+            <div class="option" data-answer="wrong">D.  Rs. 36.66 lakhs</div>
+        </div>
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            Answer: Option B
+
+            Average amount of interest paid by the Company during the given period
+
+            = Rs.	[	23.4 + 32.5 + 41.6 + 36.4 + 49.4	]	lakhs
+        5
+            = Rs.	[	183.3	]	lakhs
+        5
+            = Rs. 36.66 lakhs.
+
+        </div>
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Steve said:  Yes, Agree, 36.66 correct answer.
+        </div>
+            
+        <div class="comment" data-date="2023-04-18" data-detail="3"> Bhargav  said:  I can't understand. Please tell me in detail.  </div>
+       
+        <div class="comment" data-date="2023-02-13" data-detail="4"> Rahat   said: I agree with the given answer. Thanks all for explaining the answer. </div>
+
+        <div class="comment" data-date="2023-10-16" data-detail="2">Ashwin said:  36.66 L is the correct answer. </div>
+        
+      </div>
+       <br>
+
+    <div class="question">
+
+        <h2>Question:</h2>
+
+        <p> <img src="_files/images/data-interpretation/bar-charts/15-1-1-1.png" alt="Item of Expenditure Table" class="img-fluid">
+            <br>    
+            
+           2. What is the ratio of the total sales of branch B2 for both years to the total sales of branch B4 for both years?         </p>
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong">  A. 2:3</div>
+            <div class="option" data-answer="wrong">  B. 3:5</div>
+            <div class="option" data-answer="wrong">  C. 4:5 </div>
+            <div class="option" data-answer="correct"> D. 7:9 </div>
+            
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+            
+            Answer: Option D Required ratio =	(75 + 65)	=	140	=	7.(85 + 95)	180	9          
+        
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+            </select>
+        </div>
+
+        <div class="comment" data-date="2022-02-01" data-detail="5">Mula 
+            said:  Yes, the Required ratio 7:9.    </div>        
+       
+        <div class="comment" data-date="2023-05-15" data-detail="3">Renren
+            said: How? Anyone explain the answer in detail.
+        </div>            
+
+        <div class="comment" data-date="2023-09-10" data-detail="4"> Please, can you explain it?        </div>
+ 
+        <div class="comment" data-date="2023-08-20" data-detail="2"> Will smith said : Is there any easy way to calculate with in a few seconds?  </div>
+
+       </div>
+       <br>
+
+    <div class="question">
+
+        <h2>Question:</h2>
+        The following pie-chart shows the percentage distribution of the expenditure incurred in publishing a book. Study the pie-chart and the answer the questions based on it.
+        <img src="_files/images/data-interpretation/pie-charts/15-2-1-1.png" alt="Item of Expenditure Table" class="img-fluid">
+
+        <p>3. If for a certain quantity of books, the publisher has to pay Rs. 30,600 as printing cost, then what will be amount of royalty to be paid for these books?       </p>
+
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A. Rs. 19,450 </div>
+            <div class="option" data-answer="wrong"> B. Rs. 21,200 </div>
+            <div class="option" data-answer="correct"> C.Rs. 22,950 </div>
+            <div class="option" data-answer="wrong"> D. Rs. 26,150 </div>
+
+        </div>
+
+        <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            Let the amount of Royalty to be paid for these books be Rs. r.
+
+       Then, 20 : 15 = 30600 : r     =>     r = Rs.	(	30600 x 15	)	= Rs. 22,950.
+      
+        </div>
+
+    </div>
+
+    <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select>
+
+        </div>
+
+        <div class="comment" data-date="2022-08-01" data-detail="5">Shajana said: WHow the 20 was come? Please explain.
+        </div>
+
+        <div class="comment" data-date="2023-04-15" data-detail="3">Bhavana B   Nayak said: From where did 20 come?
+
+            Please explain the step un detail.   </div>
+        
+
+        <div class="comment" data-date="2023-09-10" data-detail="4">  Kiranmaye
+            said:
+       
+            Yes, I agree because the printing % is 20 and royalty % is 15.
+
+            So 20:15 =30600:X.</div>
+
+          <div class="comment" data-date="2023-01-20" data-detail="2">Ankit kumar said: Why we take 15? I can't understand. Please explain.</div>
+
+        </div>
+        <br>
+    
+       <div class="question">
+
+        <h2>Question:</h2>
+        <img src="_files/images/data-interpretation/line-charts/15-3-1-1.png" alt="Item of Expenditure Table" class="img-fluid">
+
+        <p>4. For which of the following pairs of years the total exports from the three Companies together are equal? </p>      
+
+        <div class="options">
+
+            <div class="option" data-answer="wrong"> A.  1995 and 1998 </div>
+            <div class="option" data-answer="correct"> B.  1996 and 1998 </div>
+            <div class="option" data-answer="wrong">C.  1997 and 1998  </div>
+            <div class="option" data-answer="wrong"> D.  1995 and 1996</div>
+
+         </div>
+
+         <div class="explanation" id="explanation">
+
+            <strong>Explanation:</strong><br>
+
+            Total exports of the three Companies X, Y and Z together, during various years are:
+
+            In 1993 = Rs. (30 + 80 + 60) crores = Rs. 170 crores.
+            
+            In 1994 = Rs. (60 + 40 + 90) crores = Rs. 190 crores.
+            
+            In 1995 = Rs. (40 + 60 + 120) crores = Rs. 220 crores.
+            
+            In 1996 = Rs. (70 + 60 + 90) crores = Rs. 220 crores.
+            
+            In 1997 = Rs. (100 + 80 + 60) crores = Rs. 240 crores.
+            
+            In 1998 = Rs. (50 + 100 + 80) crores = Rs. 230 crores.
+            
+            In 1999 = Rs. (120 + 140 + 100) crores = Rs. 360 crores.
+            
+            Clearly, the total exports of the three Companies X, Y and Z together are same during the years 1995 and 1996.  
+
+        </div>
+        </div>
+
+        <div class="discussion">
+
+        <h3>Discussion</h3>
+
+        <div class="filter">
+
+            <label for="filter">Filter Comments:</label>
+
+            <select id="filter">
+
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="most-detailed">Most Detailed</option>
+
+            </select> </div>
+        
+
+        <div class="comment" data-date="2022-01-01" data-detail="5"> Amrita
+            said: First visualize the question.
+        </div>
+   
+        <div class="comment" data-date="2023-05-10" data-detail="4">Quwi
+            said: Given explanation is better to solve the problem. Once try it.
+        </div>
+
+         <div class="comment" data-date="2023-08-20" data-detail="2">Pradeep:  Hai guys how do you do?        </div>
+         </div>
+    <br>
+
+    <script>
+        const questions = document.querySelectorAll('.question');
+        const filterSelect = document.getElementById('filter');
+        const comments = document.querySelectorAll('.comment');
+
+        questions.forEach(question => {
+            const options = question.querySelectorAll('.option');
+            const explanation = question.querySelector('.explanation');
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    options.forEach(opt => {
+                        opt.classList.remove('correct', 'wrong');
+                    });
+                    explanation.style.display = 'none';
+
+                    if (this.dataset.answer === 'correct') {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('wrong');
+                        explanation.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+        filterSelect.addEventListener('change', function() {
+            const selectedFilter = this.value;
+            const commentsArray = Array.from(comments);
+
+            if (selectedFilter === 'newest') {
+                commentsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else if (selectedFilter === 'oldest') {
+                commentsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (selectedFilter === 'most-detailed') {
+                commentsArray.sort((a, b) => b.dataset.detail - a.dataset.detail);
+            }
+
+            const discussionDivs = document.querySelectorAll('.discussion');
+            discussionDivs.forEach(discussionDiv => {
+                discussionDiv.innerHTML = `<h3>Discussion</h3><div class="filter"><label for="filter">Filter Comments:</label><select id="filter"><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="most-detailed">Most Detailed</option></select></div>`;
+                const questionComments = commentsArray.filter(comment => comment.closest('.discussion') === discussionDiv);
+                questionComments.forEach(comment => discussionDiv.appendChild(comment.cloneNode(true)));
+            });
+        });
+    </script>
+</body>
+</html>
